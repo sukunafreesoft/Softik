@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+header {
+    background-color: #1e1e1e;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #bb86fc;
+}
+
+.cheats-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.cheat-item {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s;
+}
+
+.cheat-item:hover {
+    transform: translateY(-5px);
+}
+
+.cheat-header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #333;
+}
+
+.cheat-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.cheat-name {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.cheat-description {
+    padding: 15px;
+    display: none;
+}
+
+.cheat-description p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.download-btn {
+    display: inline-block;
+    background-color: #bb86fc;
+    color: #121212;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #9a67ea;
+}
+
+footer {
+    background-color: #1e1e1e;
+    padding: 15px;
+    text-align: center;
+    border-top: 1px solid #333;
+    margin-top: auto;
+}
+
+footer a {
+    color: #bb86fc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Адаптивность */
+@media (min-width: 768px) {
+    .cheats-container {
+        flex-direction: row;
+    }
+}
