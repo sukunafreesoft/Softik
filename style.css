@@ -10,26 +10,57 @@ body {
     font-family: 'Segoe UI', sans-serif;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* расстояние между иконкой и текстом */
+}
+
+.logo-img {
+  width: 50px;   /* ширина картинки — уменьшаешь тут */
+  height: 50px;  /* высота картинки */
+  object-fit: contain;
+  padding-left: 0px;
+}
+
+.logo-text {
+  font-family: "Protest Guerrilla", sans-serif;
+  font-style: normal;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #E4E4E4;
+  letter-spacing: 5px;
+  padding-left: 8%;
+  animation: flicker 3s infinite;
+}
+
+@keyframes flicker {
+  0%, 100% {
+    opacity: 1;
+    text-shadow: 5px 5px 5px #000;
+  }
+  50% {
+    opacity: 0;
+    text-shadow: 5px 5px 1px #000;
+  }
+}
+ 
 header {
     background-color: #1e1e1e;
     padding: 10px;
     text-align: center;
     border-bottom: 1px solid #333;
-}
-
-header h1 {
-    font-size: 1.5rem;
-    color: #A800FF;
-    letter-spacing: 2px;
-    text-shadow: 0 0 5px #A800FF;
+    width: 100%;
 }
 
 .cheats-container {
+	font-family: "Nova Mono", monospace;
+	font-style: normal;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding: 20px;
+    padding: 20px 20px 20px 20px;
 }
 
 .cheat-item {
@@ -55,14 +86,30 @@ header h1 {
 }
 
 .cheat-icon {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     margin-right: 10px;
 }
 
 .cheat-name {
     font-size: 1rem;
     font-weight: bold;
+}
+
+.footer1 {
+	color: #909090;
+	font-size: 10px;
+	}
+
+.footerlink {
+	font-size: 13px;
+	}
+
+.footerlink:not(:first-child)::before {
+  content: "•";
+  margin-left: 4px;
+  margin-right: 4px;
+  color: #aaa;
 }
 
 .cheat-description {
@@ -77,29 +124,33 @@ header h1 {
 
 .download-btn {
     display: inline-block;
-    background-color: #bb86fc;
-    color: #121212;
-    padding: 8px 16px;
+    background-color: #DEDEDE;
+    color: #000000;
+    padding: 6px 12px;
     border-radius: 4px;
     text-decoration: none;
     font-weight: bold;
-    transition: background 0.3s;
+    transition: background 0.3s , color 02s;
 }
 
 .download-btn:hover {
-    background-color: #9a67ea;
+    background-color: #000000;
+    color: #fff;
 }
 
 footer {
     background-color: #1e1e1e;
+    bottom: 0;
     padding: 15px;
+    width: 100%;
+    height: 60px;
     text-align: center;
     border-top: 1px solid #333;
     margin-top: auto;
 }
 
 footer a {
-    color: #bb86fc;
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
 }
